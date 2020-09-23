@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import tw from "twin.macro"
 import styled from "styled-components"
 import { css } from "styled-components/macro"; //eslint-disable-line
+import { HashLink as Link } from "react-router-hash-link"
 
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg"
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg"
@@ -20,7 +21,7 @@ export const NavLinks = tw.div`inline-block`
 /* hocus: stands for "on hover or focus"
  * hocus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
-export const NavLink = tw.a`
+export const NavLink = tw(Link)`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300 text-yellow-500
   pb-1 border-b-2 border-transparent hover:border-yellow-700 hocus:text-yellow-700
@@ -78,15 +79,14 @@ export default ({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
-        Sign Up
+      <NavLink smooth to="/about">About</NavLink>
+      <NavLink smooth to="/#values">Values</NavLink>
+      <NavLink smooth to="/#services">Services</NavLink>
+      <NavLink smooth to="/#faq">FAQs</NavLink>
+    </NavLinks>,
+    <NavLinks key={2}>
+      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} smooth to="/#">
+        Contact Us
       </PrimaryLink>
     </NavLinks>,
   ]
@@ -96,7 +96,7 @@ export default ({
     collapseBreakPointCssMap[collapseBreakpointClass]
 
   const defaultLogoLink = (
-    <LogoLink href="/">
+    <LogoLink to="/">
       <img src={logo} alt="logo" />
       Yahnnova
     </LogoLink>

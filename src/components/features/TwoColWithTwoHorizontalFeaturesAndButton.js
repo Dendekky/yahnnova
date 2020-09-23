@@ -6,8 +6,8 @@ import {
   SectionHeading,
   Subheading as SubheadingBase,
 } from "components/misc/Headings.js"
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js"
-import TeamIllustrationSrc from "images/team-illustration-2.svg"
+// import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js"
+import prototypeIllustrationImageSrc from "images/prototype-illustration.svg"
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
 import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg"
 import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg"
@@ -35,7 +35,9 @@ const DecoratorBlob = tw(
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`
 
-const Subheading = tw(SubheadingBase)`text-center md:text-left`
+const Subheading = tw(
+  SubheadingBase
+)`text-center md:text-left uppercase tracking-widest font-bold `
 const Heading = tw(
   SectionHeading
 )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`
@@ -59,23 +61,23 @@ const FeatureHeading = tw.div`ml-3 font-bold text-xl`
 
 const FeatureDescription = tw.div`mt-4 text-center md:text-left text-gray-600 leading-relaxed`
 
-const PrimaryButton = styled(PrimaryButtonBase)((props) => [
-  tw`mt-12 text-sm inline-block mx-auto md:mx-0`,
-  props.buttonRounded && tw`rounded-full`,
-])
+// const PrimaryButton = styled(PrimaryButtonBase)((props) => [
+//   tw`mt-12 text-sm inline-block mx-auto md:mx-0`,
+//   props.buttonRounded && tw`rounded-full`,
+// ])
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = "Values",
   heading = (
     <>
-      Designed & Developed by <span tw="text-primary-500">Professionals.</span>
+      We Always Abide by Our <span tw="text-red-800">Values.</span>
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
-  imageSrc = TeamIllustrationSrc,
-  buttonRounded = true,
+  // primaryButtonText = "Learn More",
+  // primaryButtonUrl = "https://google.com",
+  imageSrc = prototypeIllustrationImageSrc,
+  // buttonRounded = true,
   imageRounded = true,
   imageBorder = false,
   imageShadow = false,
@@ -98,21 +100,21 @@ export default ({
       title: "Professionalism",
       description:
         "We have the best professional marketing people across the globe just to work with you.",
-      iconContainerCss: tw`bg-teal-300 text-teal-800`,
+      iconContainerCss: tw`bg-red-300 text-red-800`,
     },
     {
       Icon: MoneyIcon,
       title: "Affordable",
       description:
         "We promise to offer you the best rate we can - at par with the industry standard.",
-      iconContainerCss: tw`bg-red-300 text-red-800`,
+      iconContainerCss: tw`bg-green-300 text-green-800`,
     },
   ]
 
   if (!features) features = defaultFeatures
 
   return (
-    <Container>
+    <Container id="values">
       <TwoColumn>
         <ImageColumn>
           <Image
@@ -146,13 +148,13 @@ export default ({
               ))}
             </Features>
 
-            <PrimaryButton
+            {/* <PrimaryButton
               buttonRounded={buttonRounded}
               as="a"
               href={primaryButtonUrl}
             >
               {primaryButtonText}
-            </PrimaryButton>
+            </PrimaryButton> */}
           </TextContent>
         </TextColumn>
       </TwoColumn>

@@ -11,8 +11,8 @@ import {
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js"
 import loveIllustrationImageSrc from "images/love-illustration.svg"
 import { ReactComponent as StarIconBase } from "images/star-icon.svg"
-import { ReactComponent as ArrowLeftIcon } from "images/arrow-left-3-icon.svg"
-import { ReactComponent as ArrowRightIcon } from "images/arrow-right-3-icon.svg"
+import { ReactComponent as ArrowLeftIconSvg } from "images/arrow-left-3-icon.svg"
+import { ReactComponent as ArrowRightIconSvg } from "images/arrow-right-3-icon.svg"
 
 const Row = tw.div`flex flex-col md:flex-row justify-between items-center`
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`
@@ -29,6 +29,9 @@ const Image = styled.img((props) => [
   props.imageBorder && tw`border`,
   props.imageShadow && tw`shadow`,
 ])
+
+const ArrowLeftIcon = tw(ArrowLeftIconSvg)`text-yellow-900`
+const ArrowRightIcon = tw(ArrowRightIconSvg)`text-yellow-900`
 
 const Subheading = tw(SubheadingBase)`text-center md:text-left`
 const Heading = tw(
@@ -99,18 +102,39 @@ export default ({
       stars: 5,
       profileImageSrc:
         "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
-      heading: "Love the Developer Experience and Design Principles !",
+      heading: "Love the Customer Experience and 24/7 Support!",
       quote:
         "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
       customerName: "Adam Cuppy",
       customerTitle: "Founder, EventsNYC",
     },
+    {
+      stars: 5,
+      profileImageSrc:
+        "https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80",
+      heading: "I can't over-emphasize how happy the team made me!",
+      quote:
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+      customerName: "Steven Marcetti",
+      customerTitle: "Event Manager, Brite",
+    },
   ],
 }) => {
   const [sliderRef, setSliderRef] = useState(null)
+  const slickSettings = {
+    infinite: true,
+    fade: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    pauseOnHover: true,
+  }
 
   return (
-    <Container>
+    <Container id="testimonials">
       <ContentWithPaddingXl>
         <Row>
           <ImageColumn>
@@ -125,7 +149,11 @@ export default ({
             <Subheading>{subheading}</Subheading>
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <TestimonialSlider arrows={false} ref={setSliderRef}>
+            <TestimonialSlider
+              arrows={false}
+              ref={setSliderRef}
+              {...slickSettings}
+            >
               {testimonials.map((testimonial, index) => (
                 <Testimonial key={index}>
                   <StarsContainer>

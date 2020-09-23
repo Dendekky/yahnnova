@@ -36,7 +36,7 @@ const Column = styled.div`
 `
 
 const Card = styled.div`
-  ${tw`flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left h-full mx-4 px-2 py-8`}
+  ${tw`flex flex-col items-center text-center h-full mx-4 px-2 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105 `}
   .imageContainer {
     ${tw`border text-center rounded-full p-5 flex-shrink-0`}
     img {
@@ -78,11 +78,16 @@ export default ({
   const defaultCards = [
     {
       imageSrc: ShieldIconImage,
-      title: "Secure",
+      title: "Secure Transactions",
       description:
-        "We strictly only deal with vendors that provide top notch security.",
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.",
     },
-    { imageSrc: SupportIconImage, title: "24/7 Support" },
+    {
+      imageSrc: SupportIconImage,
+      title: "24/7 Support",
+      description:
+        "Eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+    },
     { imageSrc: CustomizeIconImage, title: "Customizable" },
     { imageSrc: ReliableIconImage, title: "Reliable" },
     { imageSrc: FastIconImage, title: "Fast" },

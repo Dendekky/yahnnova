@@ -73,17 +73,24 @@ export default ({
   const buttonRoundedCss = buttonRounded && tw`rounded-full`
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      {/* <NavLink href="/#">Blog</NavLink> */}
-      <NavLink href="/#">Values</NavLink>
-      <NavLink href="/#">Services</NavLink>
-      <NavLink href="/#">FAQs</NavLink>
+      <NavLink smooth to="/about">
+        About
+      </NavLink>
+      <NavLink smooth to="/#">
+        Values
+      </NavLink>
+      <NavLink smooth to="/#">
+        Services
+      </NavLink>
+      <NavLink smooth to="/#">
+        FAQs
+      </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       {/* <NavLink href="/#" tw="lg:ml-12!">
         Login
       </NavLink> */}
-      <PrimaryLink css={buttonRoundedCss} href="/#">
+      <PrimaryLink css={buttonRoundedCss} smooth to="/#">
         Contact Us
       </PrimaryLink>
     </NavLinks>,

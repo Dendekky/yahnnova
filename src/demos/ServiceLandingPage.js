@@ -4,35 +4,36 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js"
 
 import Hero from "components/hero/TwoColumnWithFeaturesAndTestimonial.js"
-// import Features from "components/features/ThreeColWithSideImage.js"
-// import MainFeature from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js"
-// import FeatureStats from "components/features/ThreeColCenteredStatsPrimaryBackground.js"
+import Features from "components/features/ThreeColWithSideImage.js"
+import MainFeature from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js"
+import FeatureStats from "components/features/ThreeColCenteredStatsPrimaryBackground.js"
 // import Pricing from "components/pricing/TwoPlansWithDurationSwitcher.js"
 // import Blog from "components/blogs/GridWithFeaturedPost.js"
-// import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js"
-// import FAQ from "components/faqs/SingleCol.js"
+import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js"
+import FAQ from "components/faqs/SingleCol.js"
+import Footer from "components/footers/MiniCenteredFooter.js"
 // import GetStarted from "components/cta/GetStartedLight.js"
 // import Footer from "components/footers/FiveColumnWithInputForm.js"
 
-const HighlightedText = tw.span`text-primary-500`
+const HighlightedText = tw.span`text-red-800`
 
 export default () => {
   return (
     <AnimationRevealPage>
       <Hero />
-      {/* <FeatureStats />
+      <FeatureStats />
       <Features
         heading={
           <>
-            Amazing <HighlightedText>Features</HighlightedText>
+            We have Amazing <HighlightedText>Service</HighlightedText>
           </>
         }
       />
       <MainFeature
         heading={
           <>
-            Cloud built by and for{" "}
-            <HighlightedText>Professionals</HighlightedText>
+            We Always Abide by Our{" "}
+            <HighlightedText>Principles.</HighlightedText>
           </>
         }
       />
@@ -43,13 +44,6 @@ export default () => {
           </>
         }
       />
-      <Pricing
-        heading={
-          <>
-            Flexible <HighlightedText>Plans</HighlightedText>
-          </>
-        }
-      />
       <FAQ
         heading={
           <>
@@ -57,16 +51,7 @@ export default () => {
           </>
         }
       />
-      <Blog
-        subheading="Blog"
-        heading={
-          <>
-            We love <HighlightedText>Writing</HighlightedText>
-          </>
-        }
-      />
-      <GetStarted />
-      <Footer /> */}
+      <Footer />
     </AnimationRevealPage>
   )
 }

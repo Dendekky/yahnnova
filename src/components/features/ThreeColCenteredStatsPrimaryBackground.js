@@ -34,19 +34,19 @@ export default ({
   stats = [
     {
       key: "Clients",
-      value: 2500,
+      value: 250,
       prefix: "",
       suffix: "+",
     },
     {
       key: "Revenue",
-      value: 100,
+      value: 10,
       prefix: "$",
       suffix: "M+",
     },
     {
       key: "Employees",
-      value: 150,
+      value: 40,
       prefix: "",
       suffix: "+",
     },
@@ -89,7 +89,7 @@ export default ({
           <Heading>
             <CountUp
               prefix="Over "
-              end={9000}
+              end={90}
               suffix={` ${heading}`}
               duration={5}
             >

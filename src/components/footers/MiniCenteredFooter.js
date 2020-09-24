@@ -40,10 +40,10 @@ export default () => {
           </LogoContainer>
           <LinksContainer>
             <NavLink to="/about">About</NavLink>
-            <NavLink to="#values">Values</NavLink>
-            <NavLink to="#faqs">FAQs</NavLink>
-            <NavLink to="#testimonials">Testimonials</NavLink>
-            <NavLink to="#services">Services</NavLink>
+            <NavLink to="/#values">Values</NavLink>
+            <NavLink to="/#faqs">FAQs</NavLink>
+            <NavLink to="/#testimonials">Testimonials</NavLink>
+            <NavLink to="/#services">Services</NavLink>
           </LinksContainer>
           <SocialLinksContainer>
             <SocialLink href="https://facebook.com/yahnnova">

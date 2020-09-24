@@ -58,7 +58,7 @@ export const DesktopNavLinks = tw.nav`
 `
 
 export default ({
-  roundedHeaderButton = false,
+  roundedHeaderButton = true,
   logoLink,
   links,
   className,
@@ -79,10 +79,18 @@ export default ({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink smooth to="/about">About</NavLink>
-      <NavLink smooth to="/#values">Values</NavLink>
-      <NavLink smooth to="/#services">Services</NavLink>
-      <NavLink smooth to="/#faq">FAQs</NavLink>
+      <NavLink smooth to="/about">
+        About
+      </NavLink>
+      <NavLink smooth to="/#values">
+        Values
+      </NavLink>
+      <NavLink smooth to="/#services">
+        Services
+      </NavLink>
+      <NavLink smooth to="/#faqs">
+        FAQs
+      </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
       <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} smooth to="/#">

@@ -100,12 +100,22 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import BlogIndexPage from "pages/BlogIndex.js";
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
-
+// import tw from "twin.macro"
 import ComponentRenderer from "ComponentRenderer.js"
 import MainLandingPage from "MainLandingPage.js"
 import LandingPage from "demos/ServiceLandingPage"
+import AboutPage from "pages/AboutUs"
+// import HeaderBase, {
+//   NavLinks,
+//   NavLink,
+//   PrimaryLink,
+// } from "components/headers/light.js"
+// import Footer from "components/footers/MiniCenteredFooter.js"
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+
+
+// const Header = tw(HeaderBase)`max-w-none`
 
 export default function App() {
   // return <AnimationRevealPage disabled></AnimationRevealPage>;
@@ -121,8 +131,15 @@ export default function App() {
         <Route path="/old-landing">
           <MainLandingPage />
         </Route>
-        <Route path="/">
+        <Route path="/about">
+          {/* <Header /> */}
+          <AboutPage />
+          {/* <Footer /> */}
+        </Route>
+        <Route exact path="/">
+          {/* <Header /> */}
           <LandingPage />
+          {/* <Footer /> */}
         </Route>
       </Switch>
     </Router>

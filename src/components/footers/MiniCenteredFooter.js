@@ -42,7 +42,7 @@ export default () => {
             <NavLink to="/about">About</NavLink>
             <NavLink to="/#values">Values</NavLink>
             <NavLink to="/#faqs">FAQs</NavLink>
-            <NavLink to="/#testimonials">Testimonials</NavLink>
+            {/* <NavLink to="/#testimonials">Testimonials</NavLink> */}
             <NavLink to="/#services">Services</NavLink>
           </LinksContainer>
           <SocialLinksContainer>

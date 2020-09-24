@@ -132,14 +132,10 @@ export default function App() {
           <MainLandingPage />
         </Route>
         <Route path="/about">
-          {/* <Header /> */}
           <AboutPage />
-          {/* <Footer /> */}
         </Route>
-        <Route exact path="/">
-          {/* <Header /> */}
+        <Route path="/">
           <LandingPage />
-          {/* <Footer /> */}
         </Route>
       </Switch>
     </Router>

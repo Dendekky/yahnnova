@@ -88,7 +88,7 @@ export default ({
       description:
         "Eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
     },
-    { imageSrc: CustomizeIconImage, title: "Customizable" },
+    { imageSrc: CustomizeIconImage, title: "Unique" },
     { imageSrc: ReliableIconImage, title: "Reliable" },
     { imageSrc: FastIconImage, title: "Fast" },
     { imageSrc: SimpleIconImage, title: "Easy" },

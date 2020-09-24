@@ -118,6 +118,7 @@ export default ({
                   end={stat.value}
                   suffix={stat.suffix}
                   duration={10}
+                  // delay={5}
                 />
                 {/* {stat.suffix} */}
               </StatValue>

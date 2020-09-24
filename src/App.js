@@ -103,8 +103,10 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import tw from "twin.macro"
 import ComponentRenderer from "ComponentRenderer.js"
 import MainLandingPage from "MainLandingPage.js"
-import LandingPage from "demos/ServiceLandingPage"
+import LandingPage from "pages/LandingPage"
 import AboutPage from "pages/AboutUs"
+import ProjectPage from "pages/Projects"
+import ContactPage from "pages/ContactUs"
 // import HeaderBase, {
 //   NavLinks,
 //   NavLink,
@@ -133,6 +135,12 @@ export default function App() {
         </Route>
         <Route path="/about">
           <AboutPage />
+        </Route>
+        <Route path="/project">
+          <ProjectPage />
+        </Route>
+        <Route path="/contact">
+          <ContactPage />
         </Route>
         <Route path="/">
           <LandingPage />

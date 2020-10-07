@@ -28,7 +28,7 @@ export default () => {
       <Features
         heading={
           <>
-            We have Amazing <HighlightedText>Service</HighlightedText>
+            We have Amazing <HighlightedText>Services</HighlightedText>
           </>
         }
       />

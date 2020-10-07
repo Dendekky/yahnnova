@@ -14,9 +14,9 @@ import { SectionDescription } from "components/misc/Typography"
 
 const Container = tw(
   ContainerBase
-)`my-8 lg:my-10 bg-yellow-700 text-gray-100 -mx-8 px-8`
+)`my-8 lg:my-10 bg-yellow-900 text-gray-100 -mx-8 px-8`
 const HeadingContainer = tw.div``
-const Heading = tw(SectionHeading)`sm:text-3xl md:text-4xl lg:text-5xl`
+const Heading = tw(SectionHeading)`sm:text-3xl md:text-4xl lg:text-5xl text-yellow-500`
 const Subheading = tw(SubheadingBase)`text-gray-100 text-center`
 const Description = tw(
   SectionDescription

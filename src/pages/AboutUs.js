@@ -21,7 +21,7 @@ export default () => {
         heading="We are a modern IT agency."
         buttonRounded
         primaryButtonText="See Products"
-        primaryButtonUrl="/product"
+        primaryButtonUrl="/project"
         imageSrc={VisionaryIconImage}
         textOnLeft={false}
       />

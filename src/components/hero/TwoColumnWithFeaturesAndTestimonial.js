@@ -36,7 +36,7 @@ const Offsetbackground = tw.div`absolute inset-0 bg-gray-300 rounded xl:-mb-8`
 const ImageDecoratorBlob = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none z-10 absolute right-0 bottom-0 transform translate-x-10 translate-y-10 h-32 w-32 opacity-25 text-gray-900 fill-current`}
 `
-const Testimonial = tw.div`max-w-sm rounded-b md:rounded-none relative sm:absolute bottom-0 inset-x-0 z-20 px-8 py-6 sm:px-10 sm:py-8 bg-yellow-900 text-white font-medium transform md:-translate-x-32 text-sm leading-relaxed md:-mr-16 xl:mr-0`
+const Testimonial = tw.div`max-w-sm rounded-b md:rounded-none relative sm:absolute bottom-0 inset-x-0 z-20 px-8 py-6 sm:px-10 sm:py-8 bg-yellow-500 text-white font-medium transform md:-translate-x-32 text-sm leading-relaxed md:-mr-16 xl:mr-0`
 const QuotesLeftIcon = tw(
   QuotesLeftIconBase
 )`w-16 h-16 md:w-12 md:h-12 absolute top-0 left-0 text-gray-100 md:text-red-500 transform translate-x-1 md:-translate-x-1/2 md:-translate-y-5 opacity-10 md:opacity-100`

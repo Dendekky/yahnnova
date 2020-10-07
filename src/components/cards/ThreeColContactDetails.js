@@ -67,32 +67,17 @@ export default ({
 
   const defaultCards = [
     {
-      title: "Secure",
+      title: "Niger",
       description:
         "We strictly only deal with vendors that provide top notch security.",
     },
     {
-      title: "24/7 Support",
+      title: "Kogi",
       description:
         "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
     },
     {
-      title: "Reliable",
-      description:
-        "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
-    },
-    {
-      title: "Easy",
-      description:
-        "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
-    },
-    {
-      title: "Customizable",
-      description:
-        "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
-    },
-    {
-      title: "Fast",
+      title: "Gombe",
       description:
         "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.",
     },
@@ -111,7 +96,7 @@ export default ({
           <Column key={i}>
             <Card>
               <span className="textContainer">
-                <span className="title">{card.title || "Fully Secure"}</span>
+                <span className="title">{card.title || "Abeokuta"}</span>
                 <p className="description">
                   {card.description ||
                     "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}

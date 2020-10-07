@@ -3,11 +3,11 @@ import tw from "twin.macro"
 import styled from "styled-components"
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading } from "components/misc/Headings.js"
-import { PrimaryLink as PrimaryLinkBase } from "components/misc/Links.js"
+// import { PrimaryLink as PrimaryLinkBase } from "components/misc/Links.js"
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js"
 import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin.svg"
 import { ReactComponent as TimeIcon } from "feather-icons/dist/icons/clock.svg"
-import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg"
+// import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg"
 
 const Container = tw.div`relative`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`
@@ -25,12 +25,12 @@ const CardColumn = tw(
 const HeadingInfoContainer = tw.div`text-center xl:text-left max-w-lg xl:max-w-none mx-auto xl:mx-0`
 const HeadingTitle = tw(SectionHeading)`mt-4 xl:text-left leading-tight`
 const HeadingDescription = tw.p`text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100 mt-8`
-const PrimaryLink = styled(PrimaryLinkBase)`
-  ${tw`inline-flex justify-center xl:justify-start items-center mt-8 text-lg`}
-  svg {
-    ${tw`ml-2 w-5 h-5`}
-  }
-`
+// const PrimaryLink = styled(PrimaryLinkBase)`
+//   ${tw`inline-flex justify-center xl:justify-start items-center mt-8 text-lg`}
+//   svg {
+//     ${tw`ml-2 w-5 h-5`}
+//   }
+// `
 
 const Card = tw.div`mx-auto xl:mx-0 xl:ml-auto max-w-sm md:max-w-xs lg:max-w-sm xl:max-w-xs`
 const CardImage = styled.div((props) => [
@@ -41,7 +41,7 @@ const CardImage = styled.div((props) => [
 const CardText = tw.div`mt-4`
 
 const CardHeader = tw.div`flex justify-between items-center`
-const CardCompany = tw.div`text-primary-500 font-bold text-lg`
+const CardCompany = tw.div`text-red-800 font-bold text-lg`
 const CardType = tw.div`font-semibold text-sm text-gray-600`
 
 const CardTitle = tw.h5`text-xl mt-4 font-bold`
@@ -56,38 +56,39 @@ const CardMetaFeature = styled.div`
     ${tw`w-5 h-5 mr-1`}
   }
 `
-const CardAction = tw(PrimaryButtonBase)`w-full mt-6`
+const CardAction = tw(PrimaryButtonBase)`w-full mt-6 inline-block text-center`
 
 export default ({
   subheading = "Our Portfolio",
   headingHtmlComponent = (
     <>
-      We've done some <span tw="text-primary-500">amazing projects.</span>
+      We&apos;ve done some <span tw="text-red-800">Amazing Projects.</span>
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.",
-  linkText = "View all Projects",
-  cardLinkText = "Read Case Study",
+  // linkText = "View all Projects",
+  cardLinkText = "View Project",
   textOnLeft = false,
 }) => {
   const cards = [
     {
       imageSrc:
         "https://images.unsplash.com/photo-1563461660947-507ef49e9c47?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      company: "Tesla Inc.",
-      type: "Ad Campaign",
-      title: "Personalized Ad Campaign using Google AdWords",
-      durationText: "90 Days Campaign",
-      locationText: "New York",
+      company: "All-Homes Inc.",
+      type: "Housing",
+      title:
+        "A company leveraging on IT to provide accomodation without stress",
+      durationText: "2+ Years",
+      locationText: "Nigeria",
     },
     {
       imageSrc:
         "https://images.unsplash.com/photo-1573165231977-3f0e27806045?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=768&q=80",
-      company: "Nestle",
-      type: "SEO Marketing",
-      title: "Ranking #1 for keywords like Chocolate, Snack",
-      durationText: "180 Day Campaign",
-      locationText: "Palo Alto",
+      company: "Lorem Ipsum Ent",
+      type: "SME Marketing",
+      title: "Doret Provider et duis ipsum eliat it suppro em  latino",
+      durationText: "1 year ",
+      locationText: "Senegal",
     },
   ]
   return (
@@ -99,9 +100,9 @@ export default ({
               <Subheading>{subheading}</Subheading>
               <HeadingTitle>{headingHtmlComponent}</HeadingTitle>
               <HeadingDescription>{description}</HeadingDescription>
-              <PrimaryLink>
+              {/* <PrimaryLink>
                 {linkText} <ArrowRightIcon />
-              </PrimaryLink>
+              </PrimaryLink> */}
             </HeadingInfoContainer>
           </HeadingColumn>
           {cards.map((card, index) => (
@@ -122,7 +123,12 @@ export default ({
                       <LocationIcon /> {card.locationText}
                     </CardMetaFeature>
                   </CardMeta>
-                  <CardAction>{cardLinkText}</CardAction>
+                  <CardAction
+                    as="a" 
+                    href="#"
+                  >
+                    {cardLinkText}
+                  </CardAction>
                 </CardText>
               </Card>
             </CardColumn>

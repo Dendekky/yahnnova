@@ -33,7 +33,7 @@ const Heading = tw(
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`
 
 const Form = tw.form`mt-8 md:mt-10 text-sm flex flex-col max-w-sm mx-auto md:mx-0`
-const Input = tw.input`mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500`
+const Input = tw.input`mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-red-500`
 const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `
@@ -44,14 +44,15 @@ export default ({
   subheading = "Contact Us",
   heading = (
     <>
-      Feel free to <span tw="text-primary-500">get in touch</span>
+      Feel free to <span tw="text-red-800">get in touch</span>
       <wbr /> with us.
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   submitButtonText = "Send",
-  formAction = "#",
+  formAction = "mailto:contact@yahnnova.com",
   formMethod = "get",
+  formEnctype = "text/plain",
   textOnLeft = true,
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
@@ -67,7 +68,7 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
-            <Form action={formAction} method={formMethod}>
+            <Form action={formAction} method={formMethod} encType={formEnctype}>
               <Input
                 type="email"
                 name="email"

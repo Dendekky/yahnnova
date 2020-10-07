@@ -6,8 +6,6 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import Header from "components/headers/light.js"
 import Footer from "components/footers/MiniCenteredFooter.js"
 import MainFeature1 from "components/features/TwoColWithButton.js"
-import Features from "components/features/ThreeColSimple.js"
-// import Features from "components/features/ThreeColWithSideImage.js";
 import TeamCardGrid from "components/cards/ProfileThreeColGrid.js"
 
 import VisionaryIconImage from "images/undraw_mind_map.svg"

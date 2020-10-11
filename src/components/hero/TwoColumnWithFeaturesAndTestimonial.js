@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import tw from "twin.macro"
+import Slider from "react-slick"
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js"
 import { SectionDescription } from "components/misc/Typography.js"
@@ -12,6 +13,9 @@ import {
 import { ReactComponent as CheckboxIcon } from "feather-icons/dist/icons/check-circle.svg"
 import { ReactComponent as QuotesLeftIconBase } from "images/quotes-l.svg"
 import { ReactComponent as SvgDecoratorBlob1 } from "images/dot-pattern.svg"
+import VisionaryTech from "images/undraw_visionary_technology.svg"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const Row = tw.div`flex flex-col lg:flex-row justify-between items-center lg:pt-16 max-w-screen-2xl mx-auto sm:px-8`
 const Column = tw.div``
@@ -36,18 +40,18 @@ const Offsetbackground = tw.div`absolute inset-0 bg-gray-300 rounded xl:-mb-8`
 const ImageDecoratorBlob = styled(SvgDecoratorBlob1)`
   ${tw`pointer-events-none z-10 absolute right-0 bottom-0 transform translate-x-10 translate-y-10 h-32 w-32 opacity-25 text-gray-900 fill-current`}
 `
+
 const Testimonial = tw.div`max-w-sm rounded-b md:rounded-none relative sm:absolute bottom-0 inset-x-0 z-20 px-8 py-6 sm:px-10 sm:py-8 bg-yellow-500 text-white font-medium transform md:-translate-x-32 text-sm leading-relaxed md:-mr-16 xl:mr-0`
 const QuotesLeftIcon = tw(
   QuotesLeftIconBase
 )`w-16 h-16 md:w-12 md:h-12 absolute top-0 left-0 text-gray-100 md:text-red-500 transform translate-x-1 md:-translate-x-1/2 md:-translate-y-5 opacity-10 md:opacity-100`
 const Quote = tw.blockquote``
-const CustomerName = tw.p`mt-4 font-bold`
-const CustomerCompany = tw.p`mt-1 text-sm text-gray-500`
 
 export default ({
   heading = "Make It Better With Technology.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  imageSrc = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+  description = "Yahnnova through our ardent synchrony of technology with everyday life seeks to complement all vigorous tasks with free flowing solutions and processes. With our ethereal inceptions life just stepped up a notch with our influx of innovative projects.",
+  imageSrc = VisionaryTech,
+  // "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
   imageDecoratorBlob = true,
   primaryButtonUrl = "#",
   primaryButtonText = "View Services",
@@ -58,13 +62,27 @@ export default ({
     "99.99% Uptime SLA",
   ],
   testimonial = {
-    quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    customerName: "Ayomide Adekoya",
-    customerCompany: "Yahnnova Ent.",
+    intro: [
+      "The global culture created by technology as a means of communication by sharing and cognitive solutions has provided a world of limitless possibilities for the world to come at this revolutionary phase.",
+      "Technology should own one major quality and its the emphatic value of help it should connote across all works of life.",
+      "Much more than a world where technology drives the society, we believe it is a complimentary tool/vehicle whose wheels we should stir in its immediate use as proxy",
+      "The world can change your tenets but technology can change the world we dream of tomorrow.",
+    ],
   },
 }) => {
   const buttonRoundedCss = buttonRounded && tw`rounded-full`
+  const slickSettings = {
+    infinite: true,
+    fade: true,
+    dots: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    cssEase: "linear",
+    pauseOnHover: true,
+  }
   return (
     <>
       <Container>
@@ -95,11 +113,13 @@ export default ({
                 {imageDecoratorBlob && <ImageDecoratorBlob />}
                 <Testimonial>
                   <QuotesLeftIcon />
-                  <Quote>{testimonial.quote}</Quote>
-                  <CustomerName>{testimonial.customerName}</CustomerName>
-                  <CustomerCompany>
-                    {testimonial.customerCompany}
-                  </CustomerCompany>
+                  <Quote>
+                    <Slider arrows={false} {...slickSettings}>
+                      {testimonial.intro.map((item) => (
+                        <div key={item}>{item}</div>
+                      ))}
+                    </Slider>
+                  </Quote>
                 </Testimonial>
               </ImageContainer>
               <Offsetbackground />

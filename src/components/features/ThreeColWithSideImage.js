@@ -15,10 +15,10 @@ import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3
 
 import SupportIconImage from "images/support-icon.svg"
 import ShieldIconImage from "images/shield-icon.svg"
-import CustomizeIconImage from "images/customize-icon.svg"
-import FastIconImage from "images/fast-icon.svg"
+// import CustomizeIconImage from "images/customize-icon.svg"
+// import FastIconImage from "images/fast-icon.svg"
 import ReliableIconImage from "images/reliable-icon.svg"
-import SimpleIconImage from "images/simple-icon.svg"
+// import SimpleIconImage from "images/simple-icon.svg"
 
 const Container = tw.div`relative`
 
@@ -65,7 +65,7 @@ export default ({
   cards = null,
   heading = "Amazing Features",
   subheading = "Features",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description = "With our list of projects and products we deliver unique customer experience through our much scrutinized thorough design approach which consists of solutions that cut across different spheres of life.  ",
 }) => {
   /*
    * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
@@ -80,18 +80,20 @@ export default ({
       imageSrc: ShieldIconImage,
       title: "Secure Transactions",
       description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.",
+        "Products aren't worth the your time is your data safety is not top priority. ",
     },
     {
       imageSrc: SupportIconImage,
-      title: "24/7 Support",
+      title: "Customer Support",
       description:
-        "Eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.",
+        "We glory in satisfaction and that includes taking our customers needs into perspective. Our response rate speaks a great deal about our technological idiosyncrasy.",
     },
-    { imageSrc: CustomizeIconImage, title: "Unique" },
-    { imageSrc: ReliableIconImage, title: "Reliable" },
-    { imageSrc: FastIconImage, title: "Fast" },
-    { imageSrc: SimpleIconImage, title: "Easy" },
+    {
+      imageSrc: ReliableIconImage,
+      title: "Reliable",
+      description:
+        "What good is a life of automated dependencies if it is not trust worthy. Yahnnova helps you cultivate a peaceful habit through our innovative projects.",
+    },
   ]
 
   if (!cards) cards = defaultCards
@@ -111,10 +113,7 @@ export default ({
               </span>
               <span className="textContainer">
                 <span className="title">{card.title || "Fully Secure"}</span>
-                <p className="description">
-                  {card.description ||
-                    "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
-                </p>
+                <p className="description">{card.description}</p>
               </span>
             </Card>
           </Column>

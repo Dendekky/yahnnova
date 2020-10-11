@@ -28,7 +28,8 @@ export default () => {
       <Features
         heading={
           <>
-            We have Amazing <HighlightedText>Services</HighlightedText>
+            We have Unique Product Featured{" "}
+            <HighlightedText>Services</HighlightedText>
           </>
         }
       />

@@ -8,13 +8,9 @@ import Hero from "components/hero/TwoColumnWithFeaturesAndTestimonial.js"
 import Features from "components/features/ThreeColWithSideImage.js"
 import MainFeature from "components/features/TwoColWithTwoHorizontalFeaturesAndButton.js"
 import FeatureStats from "components/features/ThreeColCenteredStatsPrimaryBackground.js"
-// import Pricing from "components/pricing/TwoPlansWithDurationSwitcher.js"
-// import Blog from "components/blogs/GridWithFeaturedPost.js"
 import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js"
 import FAQ from "components/faqs/SingleCol.js"
 import Footer from "components/footers/MiniCenteredFooter.js"
-// import GetStarted from "components/cta/GetStartedLight.js"
-// import Footer from "components/footers/FiveColumnWithInputForm.js"
 
 const HighlightedText = tw.span`text-red-800`
 const Header = tw(HeaderBase)`max-w-none`

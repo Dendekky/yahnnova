@@ -105,8 +105,8 @@ export default ({
       heading: "Love the Customer Experience and 24/7 Support!",
       quote:
         "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-      customerName: "Adam Cuppy",
-      customerTitle: "Founder, EventsNYC",
+      customerName: "Jonas Adam",
+      customerTitle: "Founder, StyleGuide",
     },
     {
       stars: 5,

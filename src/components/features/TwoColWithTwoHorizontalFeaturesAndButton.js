@@ -9,8 +9,10 @@ import {
 // import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js"
 import prototypeIllustrationImageSrc from "images/prototype-illustration.svg"
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
-import { ReactComponent as BriefcaseIcon } from "feather-icons/dist/icons/briefcase.svg"
-import { ReactComponent as MoneyIcon } from "feather-icons/dist/icons/dollar-sign.svg"
+import { ReactComponent as AttentivenessIcon } from "feather-icons/dist/icons/crosshair.svg"
+import { ReactComponent as CreativityIcon } from "feather-icons/dist/icons/sliders.svg"
+import { ReactComponent as DiversityIcon } from "feather-icons/dist/icons/aperture.svg"
+import { ReactComponent as MADIcon } from "feather-icons/dist/icons/bar-chart.svg"
 
 const Container = tw.div`relative`
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`
@@ -43,7 +45,7 @@ const Heading = tw(
 )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`
 const Description = tw.p`mt-8 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`
 
-const Features = tw.div`mx-auto md:mx-0 flex flex-col lg:flex-row max-w-xs lg:max-w-none`
+const Features = tw.div`mx-auto md:mx-0 grid grid-cols-1 lg:grid-cols-2 max-w-xs lg:max-w-none`
 const Feature = tw.div`mt-10 lg:mt-8 flex items-center md:items-start flex-col md:mr-8 last:mr-0`
 
 const FeatureHeadingContainer = tw.div`flex items-center`
@@ -73,7 +75,7 @@ export default ({
       We Always Abide by Our <span tw="text-red-800">Values.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "We are defined by what we hold on tightly. These aren't just word to us but an identity and cultural background we have attained and will continue to hold up.",
   // primaryButtonText = "Learn More",
   // primaryButtonUrl = "https://google.com",
   imageSrc = prototypeIllustrationImageSrc,
@@ -96,18 +98,32 @@ export default ({
    */
   const defaultFeatures = [
     {
-      Icon: BriefcaseIcon,
-      title: "Professionalism",
+      Icon: AttentivenessIcon,
+      title: "Attentiveness",
       description:
-        "We have the best professional marketing people across the globe just to work with you.",
-      iconContainerCss: tw`bg-red-300 text-red-800`,
+        "We don’t just create, we listen. A feature we uphold that harnesses the needs of our immediate environment and beyond.",
+      iconContainerCss: tw`bg-yellow-900 text-red-800`,
     },
     {
-      Icon: MoneyIcon,
-      title: "Affordable",
+      Icon: CreativityIcon,
+      title: "Creativity",
       description:
-        "We promise to offer you the best rate we can - at par with the industry standard.",
-      iconContainerCss: tw`bg-green-300 text-green-800`,
+        "Subjecting our imaginative ability to its most productive while bringing reality into play, we have capitalized on one of humanities essence of being more and doing more which in turn results in us giving more",
+      iconContainerCss: tw`bg-yellow-900 text-red-800`,
+    },
+    {
+      Icon: DiversityIcon,
+      title: "Diversity",
+      description:
+        "We create and listen globally with an ability to cut through different spheres of life in our creative process we deliver projects that have no confinements but relate to humanities need for choice and intuition",
+      iconContainerCss: tw`bg-yellow-900 text-red-800`,
+    },
+    {
+      Icon: MADIcon,
+      title: "Making a difference",
+      description:
+        "We relish the fulfillment of the right kind of impact and development. At Yahnnova, no design process is void of a humanitarian view which speaks our deep concern for better world with technology.",
+      iconContainerCss: tw`bg-yellow-900 text-red-800`,
     },
   ]
 

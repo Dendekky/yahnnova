@@ -52,19 +52,19 @@ export default ({
         "Yes, it is, if you have a membership with us. Otherwise it is charged as per the agreement. Some limits do apply as to how much items can be included in your itinerary. This limit is enough for any one person and merely exists to discourage abusal of the system.",
     },
     {
-      question: "Do you have a long term package?",
+      question: "Can I reach out to you through proxy?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
+      question: "How are your pricing system?",
       answer:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
       question: "Where can I reach you for support ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Our addresses are listed on the contact page. You can also send us a mail or call any of our listed numbers. w are available to provide immediate response to you.",
     },
   ],
 }) => {

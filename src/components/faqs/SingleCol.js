@@ -44,7 +44,7 @@ const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
 export default ({
   subheading = "FAQS",
   heading = "You have Questions ?",
-  description = "And we have got answers to all of them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description = "We have answers to them all. We create thought provoking solutions which in turn instigates mind bubbling questions.",
   faqs = [
     {
       question: "Is maintenance provided free of cost ?",

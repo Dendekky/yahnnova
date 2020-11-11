@@ -65,7 +65,7 @@ export default ({
       We&apos;ve done some <span tw="text-red-800">Amazing Projects.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.",
+  description = "We have a long list of projects and ideas that maybe helpful to you. Our standard for the execution have a long lasting impact on the purpose we promote. We work through innovations the cater for B2B’s and B2C’s.",
   // linkText = "View all Projects",
   cardLinkText = "View Project",
   textOnLeft = false,

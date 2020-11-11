@@ -19,6 +19,7 @@ export default () => {
       <MainFeature1
         subheading={<Subheading>About Yahnnova</Subheading>}
         heading="We are a modern IT agency."
+        description="Intuitive design thinking with grafted innovation is our label. At Yahnnova we sort out the ambiguity with product designers who develop through research and constructive thinking. We believe in the power of remodeling the past and creating the future. It’s simple, brilliant minds make the world go round! Our clients need drives our innovation."
         buttonRounded
         primaryButtonText="See Products"
         primaryButtonUrl="/project"
@@ -28,6 +29,7 @@ export default () => {
       <MainFeature1
         subheading={<Subheading>Our Vision</Subheading>}
         heading="We aim to disrupt the IT space."
+        description="We love to help people grow thereby making the world better with technology. Through this we will create a complimentary human-technology relationship which will be the core representation for the next progressive phase of technology and the solutions it brings."
         buttonRounded
         primaryButtonText="Contact Us"
         primaryButtonUrl="/contact"

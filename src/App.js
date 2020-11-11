@@ -9,7 +9,6 @@ import AboutPage from "pages/AboutUs"
 import ProjectPage from "pages/Projects"
 import ContactPage from "pages/ContactUs"
 
-
 export default function App() {
   return (
     <Router>

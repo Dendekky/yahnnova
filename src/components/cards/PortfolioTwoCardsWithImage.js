@@ -123,10 +123,7 @@ export default ({
                       <LocationIcon /> {card.locationText}
                     </CardMetaFeature>
                   </CardMeta>
-                  <CardAction
-                    as="a" 
-                    href="#"
-                  >
+                  <CardAction as="a" href="#">
                     {cardLinkText}
                   </CardAction>
                 </CardText>

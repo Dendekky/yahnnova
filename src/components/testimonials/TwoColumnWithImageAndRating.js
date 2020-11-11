@@ -85,7 +85,7 @@ export default ({
   imageShadow = false,
   subheading = "Testimonials",
   heading = "Our Clients Love Us.",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.",
+  description = "Our exceptional service has warmed the hearts of our clients all through we cherish experiences and understand customer satisfaction is the only way everybody stays happy. Through our solutions we aim to harness the value of peace and transmit where necessary. We gng o into the spaces of our clients and help bring a better work environment. Creating and innovation is easier with our clients on board. We cherish and love the smiles generated from automated services that’s why we give our best input always.",
   textOnLeft = false,
   testimonials = [
     {

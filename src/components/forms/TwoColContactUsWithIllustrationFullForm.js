@@ -48,7 +48,7 @@ export default ({
       <wbr /> with us.
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description = "We hope to keep you up to date with products that suit and enhance your lifestyle.",
   submitButtonText = "Send",
   formAction = "mailto:contact@yahnnova.com",
   formMethod = "get",
